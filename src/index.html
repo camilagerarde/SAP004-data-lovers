@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="style.css" />
+    <title>Pokelovers</title>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/2ab419e357.js" crossorigin="anonymous"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <body class="body-style">
+    <header>
+      <nav class="links-style">
+        <ul class="ul-link">
+          <li><a aria-current="page" href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="extras.html">Extras</a></li>
+        </ul>
+      </nav>
+      <figure class="title-style">
+        <a href="index.html"><img src="./img/logo.png" alt="logo-titulo-pokelovers" class="title-img"></a>
+      </figure>
+    </header>
 
-  <title>Pokelovers</title>
-</head>
-
-<body class="body-style">
-  <header>
-    <nav class="links-style">
-      <ul class="ul-link">
-        <li><a aria-current="page" href="index.html">Home</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="extras.html">Extras</a></li>
-      </ul>
-    </nav>
-    <figure class="title-style">
-      <img src="./img/logo.png" alt="logo-de-pokemon" class="title-img">
-    </figure>
-  </header>
-
-  <main class="main-container">
-    <div>
+    <main class="main-container">
       <section class="filters-style">
         <div class="search-style">
           <input type="search" class="input" placeholder="PESQUISE O POKÉMON" id="search">
@@ -52,7 +48,6 @@
           <option value="type-Ghost"> &#xf6e2; Fantasma</option>
           <option value="type-Dragon"> &#xf6d5; Dragão</option>
         </select>
-
         <select id="filter-weakness" class="options-style">
           <option value="">FRAQUEZA</option>
           <option value="">TODOS</option>
@@ -74,7 +69,6 @@
           <option value="weaknesses-Dark"> &#xf186; Sombras</option>
           <option value="weaknesses-Steel"> &#xf56a; Metal</option>
         </select>
-
         <select id="ordination" class="options-style">
           <option value="">ORDENAR</option>
           <option value="name-increasing">A-Z &#xf063;</option>
@@ -85,28 +79,19 @@
           <option value="spawn_chance-decreasing">Chances de Aparecer &#xf062;</option>
         </select>
       </section>
-    </div>
-
-  
-    <div id="local-cards" class="cards"> </div>
-
-
-
-    <div id="myModal" class="modal">
-      <div id="modal-value" class="modal-content">
+      <section id="local-cards" class="cards"></section>
+      <div id="myModal" class="modal">
+        <div id="modal-value" class="modal-content"></div>
       </div>
-    </div>
- 
-  </main>
+    </main>
 
-  <footer class="footer-style">
-    <h3>Desenvolvimento <a href="https://github.com/camilagerarde" title="Camila Cunha" target="_blank">Camila Cunha</a>
-      e <a href="https://github.com/naereloire" title="Naere Loire" target="_blank">Naere Loire</a>
-    </h3>
-  </footer>
+    <footer class="footer-style">
+      <h3>Desenvolvimento <a href="https://github.com/camilagerarde" title="Camila Cunha" target="_blank">Camila Cunha</a>
+        e <a href="https://github.com/naereloire" title="Naere Loire" target="_blank">Naere Loire</a>
+      </h3>
+    </footer>
 
-  <script src="main.js" type="module"></script>
-
-</body>
-
+    <script src="main.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/2ab419e357.js" crossorigin="anonymous"></script>
+  </body>
 </html>
