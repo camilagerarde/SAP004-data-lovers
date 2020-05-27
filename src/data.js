@@ -126,48 +126,43 @@ function compareSearchedValue(objeto, option, searchedValue) {
   }
 }
 
-
-//parei aqui
-
-
 /**
  * Função aplica a seleção no array de acordo com o SearchedValue.
  * @param {Array.<Object>} data Array contendo lista de objetos(151 Pokémons).
- * @param {string} option Uma propriedade(ex:num)do objeto reperesentada por uma string.
- * @param {string} searchedValue uma string representando qualquer valor da buscado no array (o valor da propriedade).
+ * @param {string} option Uma propriedade (ex:num) do objeto representada por uma string.
+ * @param {string} searchedValue uma string representando qualquer valor buscado no array (o valor da propriedade).
  * @returns Uma lista contendo os objetos filtrados.
  */
-export function filterInfons(data, option, searchedValue) {
+export function filterInfos(data, option, searchedValue) {
+  let filteredList = []
   if (
-    !Array.isArray(data) || data.length === 0 ||
-    typeof option != "string" || option.length === 0 ||
+    !Array.isArray(data) || !data.length ||
+    typeof option != "string" || !option.length ||
     typeof searchedValue != "string"
   ) {
-    throw new TypeError("parâmetro invalido")
+    throw new TypeError("parâmetro inválido");
+  } else {
+    const listPokemon = data;
+    filteredList = listPokemon.filter((x) => compareSearchedValue(x, option, searchedValue));
   }
-  let listPokemon = data
-  let filteredList = []
-  filteredList = listPokemon.filter(function (x) {
-    return compareSearchedValue(x, option, searchedValue)
-  })
-  return filteredList
+  return filteredList;
 }
 
 /**
- * Função realiza o calculo do futuro CP após evolução.
+ * Função realiza o cálculo do futuro CP após evolução.
  * @param {Array.<Object>} data Array contendo lista de objetos(151 Pokémons).
- * @param {number} currentCp Cp atual do Pokémon representado por um numero.
+ * @param {number} currentCp Cp atual do Pokémon representado por um número.
  * @param {string} namePokemon Nome do Pokémon buscado que terá o futuro CP calculado.
- * @returns Um objeto contendo valor max/min e medio do futuro cp.
+ * @returns Um objeto contendo valor max/min e médio do futuro cp.
  */
 export function computeCp(data, currentCp, namePokemon) {
-  let pokemonSearched = filterInfons(data, "name", namePokemon);
+  let pokemonSearched = filterInfos(data, "name", namePokemon);
   pokemonSearched = pokemonSearched[0];
   let computeResult;
-  let percentMax = 1.1;
-  let percentMin = 0.9;
+  const percentMax = 1.1;
+  const percentMin = 0.9;
 
-  if (pokemonSearched.multipliers === null) {
+  if (!pokemonSearched.multipliers) {
     computeResult = {
       maxCp: "Não possui",
       minCp: "Não possui",
@@ -193,44 +188,43 @@ export function computeCp(data, currentCp, namePokemon) {
 }
 
 /**
- * Função que acessa o array e seleciona os objetos de interesse 
- * (ex: a proxima evolução do Pokémon filtrado).
+ * Função que acessa o array e seleciona os objetos de interesse (ex: a proxima evolução do Pokémon filtrado).
  * @param {Array.<Object>} data Array contendo lista de objetos(151 Pokémons).
- * @param {Object} namePokemon Intém(Pokémon)da lista de Pokémons, 
- * que representa a proxima evolução do Pokémon filtrado.  
+ * @param {Object} namePokemon Item (Pokémon) da lista de Pokémons, que representa a proxima evolução do Pokémon filtrado.  
  * @returns Uma lista com um objeto.
  */
 export function getNextEvolution(data, namePokemon) {
-  let evolutionList = []
-  let pokemon = filterInfons(data, "name", namePokemon)[0]
+  let evolutionList = [];
+  let pokemon = filterInfos(data, "name", namePokemon)[0];
   if (pokemon.next_evolution === undefined) {
-    return evolutionList = []
-  }
-  else {
-    evolutionList.push(pokemon)
+    return evolutionList = [];
+  } else {
+    evolutionList.push(pokemon);
     for (let evolution of pokemon.next_evolution) {
-      let pokemonEvolution = filterInfons(data, "name", evolution.name)[0]
-      evolutionList.push(pokemonEvolution)
+      let pokemonEvolution = filterInfos(data, "name", evolution.name)[0];
+      evolutionList.push(pokemonEvolution);
     }
-
-    return evolutionList
+    return evolutionList;
   }
 }
 
 /**
- * Função realiza calculo estatístico da porcentagem de Pokémons por tipo.
+ * Função que realiza cálculo estatístico da porcentagem de Pokémons por tipo.
  * @param {Array.<Object>} data Array contendo lista de objetos(151 Pokémons).
- * @param {string} option  Uma propriedade(ex:tipo)do objeto reperesentada por uma string.
- * @param {Array.<String>} arrayTypes Array contendo valores que serão filtrados para calculo.
+ * @param {string} option  Uma propriedade (ex:tipo) do objeto representada por uma string.
+ * @param {Array.<String>} arrayTypes Array contendo valores que serão filtrados para cálculo.
  */
 export function calcPorcent(data, option, arrayTypes) {
-  if (arrayTypes.length === 0) { throw TypeError("parâmetro invalido") }
-  let allPokemons = data
-  let list = []
-  for (let valueType of arrayTypes) {
-    let typesPokemons = filterInfons(data, option, valueType)
-    let calcResult = ((typesPokemons.length / allPokemons.length) * 100)
-    list.push(calcResult.toFixed(0))
+  let list = [];
+  if (!arrayTypes.length) {
+    throw TypeError("parâmetro inválido")
+  } else {
+    const allPokemons = data;
+    for (let valueType of arrayTypes) {
+      let typesPokemons = filterInfos(data, option, valueType);
+      let calcResult = ((typesPokemons.length / allPokemons.length) * 100);
+      list.push(calcResult.toFixed(0));
+    }
   }
-  return list
+  return list;
 }

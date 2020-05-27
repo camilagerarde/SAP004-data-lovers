@@ -1,4 +1,4 @@
-import { selectInfosToShow, ordenation, filterInfons, computeCp, getNextEvolution, calcPorcent } from '../src/data.js';
+import { selectInfosToShow, ordenation, filterInfos, computeCp, getNextEvolution, calcPorcent } from '../src/data.js';
 
 const dataInput = [{
   "id": 1,
@@ -187,26 +187,26 @@ const arrayFilteredExpected = [{
 
 describe('filterInfos', () => {
   it('is a function', () => {
-    expect(typeof filterInfons).toBe('function');
+    expect(typeof filterInfos).toBe('function');
   });
 
   it('should throw TypeError when invoked with wrong argument types', () => {
-    expect(() => filterInfons()).toThrow(TypeError);
-    expect(() => filterInfons([])).toThrow(TypeError);
-    expect(() => filterInfons(arrayInput, 0, 0)).toThrow(TypeError);
-    expect(() => filterInfons(arrayInput, "", "")).toThrow(TypeError);
+    expect(() => filterInfos()).toThrow(TypeError);
+    expect(() => filterInfos([])).toThrow(TypeError);
+    expect(() => filterInfos(arrayInput, 0, 0)).toThrow(TypeError);
+    expect(() => filterInfos(arrayInput, "", "")).toThrow(TypeError);
   })
 
   it('returns `filtered array found`', () => {
-    expect(filterInfons(arrayInput, "name", "Arnold")).toStrictEqual(arrayFilteredExpected);
+    expect(filterInfos(arrayInput, "name", "Arnold")).toStrictEqual(arrayFilteredExpected);
   });
 
   it('returns `filtered array found`', () => {
-    expect(filterInfons(arrayInput, "caracteristica", "pardo")).toStrictEqual(arrayFilteredExpected);
+    expect(filterInfos(arrayInput, "caracteristica", "pardo")).toStrictEqual(arrayFilteredExpected);
   });
 
   it('returns `not found`', () => {
-    expect(filterInfons(arrayInput, "name", "abcd")).toStrictEqual([]);
+    expect(filterInfos(arrayInput, "name", "abcd")).toStrictEqual([]);
   });
 });
 

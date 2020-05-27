@@ -1,5 +1,5 @@
 import data from "./data/pokemon/pokemon.js";
-import { selectInfosToShow, ordenation, filterInfons, getNextEvolution, } from "./data.js"
+import { selectInfosToShow, ordenation, filterInfos, getNextEvolution, } from "./data.js"
 
 const arrayPokemon = data.pokemon
 let arrayAuxiliar = arrayPokemon
@@ -144,11 +144,11 @@ function filterPokemons() {
 
   if (valueFilterWkenesses !== "") {
     arrayParameters = valueFilterWkenesses.split("-")
-    list_type = filterInfons(list_type, arrayParameters[0], arrayParameters[1])
+    list_type = filterInfos(list_type, arrayParameters[0], arrayParameters[1])
   }
   if (valueFiltertype !== "") {
     arrayParameters = valueFiltertype.split("-")
-    list_weak = filterInfons(list_weak, arrayParameters[0], arrayParameters[1])
+    list_weak = filterInfos(list_weak, arrayParameters[0], arrayParameters[1])
   }
   list = list_type.filter(function (x) {
     return list_weak.includes(x)
@@ -169,7 +169,7 @@ let getButtonSearch = document.getElementById("button-search")
 
 function searchByName(event) {
   if (event.key === "Enter" || event.type === "click") {
-    let searchResult = filterInfons(arrayPokemon, "name", getInputSearch.value)
+    let searchResult = filterInfos(arrayPokemon, "name", getInputSearch.value)
     showPokemons(searchResult)
   }
 }
