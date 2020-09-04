@@ -1,7 +1,7 @@
 /* global Chart*/
 
 import data from "./data/pokemon/pokemon.js";
-import { ordenation, computeCp, filterInfons, getNextEvolution, calcPorcent } from "./data.js"
+import { ordenation, computeCp, filterInfos, getNextEvolution, calcPorcent } from "./data.js";
 
 const arrayPokemon = data.pokemon;
 let dataListSorted = ordenation(arrayPokemon, "name", "increasing");
@@ -23,7 +23,7 @@ function calculateAndShow(event) {
   let inputName = document.getElementById("search-name").value;
   let inputCp = document.getElementById("search-cp").value;
   let result = (computeCp(arrayPokemon, inputCp, inputName));
-  let pokemon = filterInfons(arrayPokemon, "name", inputName);
+  let pokemon = filterInfos(arrayPokemon, "name", inputName);
   let evolutions = getNextEvolution(arrayPokemon, inputName);
   let card = "";
   showPokemon.innerHTML = "";

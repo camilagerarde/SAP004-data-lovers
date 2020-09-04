@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html >
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
-  <link rel="stylesheet" href="extras.css">
-  <title>Pokelovers</title>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="extras.css">
+    <title>Pokelovers</title>
+  </head>
 
-<body class="body-style">
-  <header>
-    <nav class="links-style">
-      <ul class="ul-link">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a aria-current="page" href="extras.html">Extras</a></li>
-      </ul>
-    </nav>
+  <body class="body-style">
+    <header>
+      <nav class="links-style">
+        <ul class="ul-link">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a aria-current="page" href="extras.html">Extras</a></li>
+        </ul>
+      </nav>
+      <figure class="title-style">
+        <a href="index.html"><img src="./img/logo.png" alt="logo-titulo-pokelovers" class="title-img"></a>
+      </figure>
+    </header>
 
-    <figure class="title-style">
-      <a href="index.html"><img src="./img/logo.png" alt="logo-de-pokemon" class="title-img"></a>
-    </figure>
-  </header>
-
-  <main class="main-style">
-    <div>
+    <main class="main-style">
       <section>
         <div id="div-data-list">
           <form class="filters-style">
-            <input type="text" list="pokemon-list" class="options-style" id="search-name" placeholder="INSIRA O NOME">
+            <input type="text" list="pokemon-list" class="options-style" id="search-name" placeholder="INSIRA O POKÉMON">
             <datalist id="pokemon-list"></datalist>
             <input type="number" min="0" class="options-style" placeholder="INSIRA O CP ATUAL" id="search-cp">
             <div class="buttons">
@@ -40,49 +38,43 @@
           </form>
         </div>
       </section>
-    </div>
-
-    <div id="div-text" class="text-container">
-      <section class="text-style">
-        <h2>Poder de Combate:</h2>
-        <p>Todos os Pokémons possuem Poder de Combate (PC).<br><br> 
-          Cada Pokémon individual possui um PC ao ser pego, que indica o quão bem este Pokémon específico se sairá em
-          batalha.Nem todos os Pokémon possuem o mesmo PC - por exemplo, se você pegou dois Pikachu, eles não terão
-          necessariamente o mesmo PC.Quando o pokemon evolui, seu PC pode aumentar.</p>
-        <p>Utilize nossa calculadora, para verificar o provavel CP do seu pokemon após a evolução.
-          <a href="https://niantic.helpshift.com/a/pokemon-go/?s=gyms-and-battle&f=what-are-combat-power-cp-and-hit-points-hp&l=pt&p=web"
-            target="_blank"><strong>Fonte</strong></a></p>
-        <h3><mark>Instruções:</mark></h3>
-        <ol>
-          <li>Esolha o pokemon.</li>
-          <li>Insira o CP atual do pokemon escolhido.</li>
-          <li>Clique em enviar e veja o resultado.</li>
-        </ol>
-      </section>
-    </div>
-
-    <div id="cards" class="cards"></div>
-
-    <div class="canvas-container">
-      <div class="div-canvas">
-        <div id="graphic" class="graphic-style">
-          <canvas id="graphic-types"></canvas>
+      <div id="div-text" class="text-container">
+        <section class="text-style">
+          <h2>Poder de Combate:</h2>
+          <p>O poder de cada criatura do jogo Pokémon Go é contabilizado pelo CP, que significa 
+            <span class="italic">"Combat Power"</span>, ou Poder de Combate, e determina a força que ele terá para
+            defender um ginásio através de batalhas.
+            <br>Nem todos os Pokémon possuem o mesmo valor de PC, se dois Pikachus forem pegos por exemplo, eles não
+            terão necessariamente o mesmo valor. <br>Quando o Pokémon evolui, seu PC pode aumentar.</p>
+          <p><span class="bold">Utilize nossa calculadora, para verificar o provável CP do seu Pokémon após a
+              evolução.</span></p>
+          <h3 class="underline">Instruções:</h3>
+          <ol>
+            <li>Escolha o Pokémon.</li>
+            <li>Insira o CP atual do Pokémon escolhido.</li>
+            <li>Clique em <span class="bold">enviar</span> e veja o resultado.</li>
+          </ol>
+        </section>
+      </div>
+      <div id="cards" class="cards"></div>
+      <div class="canvas-container">
+        <div class="div-canvas">
+          <div id="graphic" class="graphic-style">
+            <canvas id="graphic-types"></canvas>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
 
-  </main>
+    <footer class="footer-style">
+      <h3>Desenvolvimento <a href="https://github.com/camilagerarde" title="Camila Cunha" target="_blank">Camila Cunha</a>
+        e <a href="https://github.com/naereloire" title="Naere Loire" target="_blank">Naere Loire</a>
+      </h3>
+    </footer>
 
-  <footer class="footer-style">
-    <h3>Desenvolvimento <a href="https://github.com/camilagerarde" title="Camila Cunha" target="_blank">Camila Cunha</a>
-      e <a href="https://github.com/naereloire" title="Naere Loire" target="_blank">Naere Loire</a>
-    </h3>
-  </footer>
+    <script src="extras.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
 
-  <script src="extras.js" type="module"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
-
-</body>
-
+  </body>
 </html>

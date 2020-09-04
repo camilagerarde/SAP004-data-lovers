@@ -152,6 +152,10 @@
   width: 100%;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .box-container:hover .box-cards {
   transform: rotateY(180deg);
 }
@@ -260,7 +264,6 @@
   }
 
   .title-img {
-    height: 21%;
     width: 90%;
   }
 
@@ -341,7 +344,6 @@
   }
 
   .title-img {
-    height: 21%;
     width: 75%;
   }
 
@@ -431,7 +433,6 @@
   }
 
   .title-img {
-    height: 21%;
     width: 75%;
   }
 
