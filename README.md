@@ -114,6 +114,6 @@ http://localhost:5000
 
 ## Agradecimentos
 
-**Feito por [Camila Cunha](https://github.com/camilagerarde) e [Naere Loire](https://github.com/naereloire), com base no projeto da [Laboratória](https://github.com/Laboratoria).**
+**Projeto realizado por [Camila Cunha](https://github.com/camilagerarde) e [Naere Loire](https://github.com/naereloire), para o Bootcamp da [Laboratória](https://github.com/Laboratoria).**
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
