@@ -1,6 +1,6 @@
 # ![Pokelover](./src/img/logo.png)
 
-Para acessar a página [clique aqui](https://camilagerarde.github.io/SAP004-data-lovers/). :computer:
+#### Para acessar a página [clique aqui](https://camilagerarde.github.io/SAP004-data-lovers/). :computer:
 
 [Introdução](#introdução) | [Planejamento](#planejamento) | [Sobre a página](#sobre-a-página) | [Considerações técnicas](#considerações-técnicas) | [Instalação e execução](#instalação-e-execução-octocat) | [Agradecimentos](#agradecimentos)
 
