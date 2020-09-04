@@ -2,7 +2,7 @@
 
 #### Para acessar a página [clique aqui](https://camilagerarde.github.io/SAP004-data-lovers/). :computer:
 
-[Introdução](#introdução) | [Planejamento](#planejamento) | [Sobre a página](#sobre-a-página) | [Considerações técnicas](#considerações-técnicas) | [Instalação e execução](#instalação-e-execução-octocat) | [Agradecimentos](#agradecimentos)
+[Introdução](#introdução) | [Criação e desenvolvimento](#criação-e-desenvolvimento) | [Sobre a página](#sobre-a-página) | [Considerações técnicas](#considerações-técnicas) | [Instalação e execução](#instalação-e-execução-octocat) | [Agradecimentos](#agradecimentos)
 
 ---
 
@@ -18,7 +18,7 @@ Utilizamos o banco de dados do anime **Pokémon**.
 <img src="https://media.giphy.com/media/vnGlErQHuF9BK/giphy.gif" width="200" heigth="200"> 
 </p>
 
-## Planejamento
+## Criação e desenvolvimento
 
 ### Identificação do usuário:
 Como início da nossa definição de usuário criamos personas, que representam nossos possíveis usuários e suas necessidades, para assim compreender e planejar as soluções que deveríamos oferecer em nossa aplicação.
