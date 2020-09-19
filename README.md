@@ -2,6 +2,8 @@
 
 #### Para acessar a página [clique aqui](https://camilagerarde.github.io/SAP004-data-lovers/). :computer:
 
+## Índice
+
 [Introdução](#introdução) | [Criação e desenvolvimento](#criação-e-desenvolvimento) | [Sobre a página](#sobre-a-página) | [Considerações técnicas](#considerações-técnicas) | [Instalação e execução](#instalação-e-execução-octocat) | [Agradecimentos](#agradecimentos)
 
 ---
