@@ -116,6 +116,8 @@ http://localhost:5000
 
 ## Agradecimentos
 
+Ícones: [Freepik](https://www.flaticon.com/br/autores/freepik), [Roundicons Freebies](https://www.flaticon.com/br/autores/roundicons-freebies) e [Those Icons](https://www.flaticon.com/br/autores/those-icons).  
+
 **Projeto realizado por [Camila Cunha](https://github.com/camilagerarde) e [Naere Loire](https://github.com/naereloire), para o Bootcamp da [Laboratória](https://github.com/Laboratoria).**
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
